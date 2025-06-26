@@ -1,0 +1,213 @@
+# PSP Master - 个人主档案
+metadata:
+  name: "PSP Master"
+  version: "1.0.0"
+  category: "core"
+  description: "用户个人信息和偏好的核心档案，作为所有功能PSP的基础上下文"
+  author: "notcontrolOS Core Team"
+  created_date: "2025-01-24"
+  updated_date: "2025-01-24"
+  priority: "system"
+  
+personal_profile:
+  basic_info:
+    name: "用户姓名"
+    timezone: "时区信息"
+    language_preference: "语言偏好"
+    cultural_context: "文化背景"
+    age_range: "年龄段（可选）"
+    
+  communication_style:
+    formality_level: "正式程度偏好 (casual/professional/mixed)"
+    response_length: "回复长度偏好 (concise/detailed/adaptive)"
+    tone_preference: "语调偏好 (friendly/serious/humorous)"
+    directness: "直接程度 (direct/diplomatic/context_aware)"
+    
+  work_context:
+    profession: "职业领域"
+    work_schedule: "工作时间安排"
+    meeting_preferences: "会议偏好"
+    productivity_patterns: "工作效率模式"
+    communication_protocols: "沟通协议"
+    
+  personal_context:
+    family_structure: "家庭结构"
+    living_situation: "居住情况"
+    health_considerations: "健康注意事项"
+    financial_approach: "理财方式"
+    lifestyle_preferences: "生活方式偏好"
+    
+  technology_preferences:
+    device_usage_patterns: "设备使用模式"
+    app_preferences: "应用偏好"
+    notification_settings: "通知偏好"
+    privacy_levels: "隐私等级设置"
+    automation_comfort: "自动化接受度"
+
+behavioral_patterns:
+  daily_routines:
+    morning_routine: "晨间例程"
+    work_patterns: "工作模式"
+    evening_routine: "晚间例程"
+    weekend_activities: "周末活动"
+    
+  decision_making:
+    risk_tolerance: "风险承受度"
+    decision_speed: "决策速度偏好"
+    information_needs: "信息需求程度"
+    consultation_preferences: "咨询偏好"
+    
+  learning_style:
+    information_processing: "信息处理方式"
+    feedback_preference: "反馈接收偏好"
+    complexity_tolerance: "复杂度容忍度"
+    tutorial_needs: "教程需求"
+
+relationship_context:
+  family_relationships:
+    immediate_family: "直系亲属信息"
+    extended_family: "扩展家庭"
+    relationship_dynamics: "关系动态"
+    
+  professional_relationships:
+    colleagues: "同事关系"
+    supervisors: "上级关系"
+    subordinates: "下属关系"
+    clients_partners: "客户伙伴"
+    
+  social_relationships:
+    close_friends: "密友关系"
+    acquaintances: "熟人关系"
+    community_involvement: "社区参与"
+    
+  communication_protocols:
+    urgency_contacts: "紧急联系人"
+    work_boundaries: "工作边界"
+    personal_boundaries: "个人边界"
+
+preferences_and_constraints:
+  time_management:
+    peak_hours: "高效时段"
+    low_energy_periods: "低能量时段"
+    break_preferences: "休息偏好"
+    deadline_approach: "截止日期处理方式"
+    
+  content_preferences:
+    information_sources: "信息来源偏好"
+    content_formats: "内容格式偏好"
+    complexity_levels: "复杂度偏好"
+    update_frequency: "更新频率"
+    
+  interaction_preferences:
+    assistance_level: "协助程度偏好"
+    confirmation_needs: "确认需求"
+    suggestion_style: "建议方式"
+    error_handling: "错误处理偏好"
+
+system_prompt_for_psps: |
+  基于用户的个人档案，在所有PSP交互中：
+  
+  1. **沟通风格适配**
+     - 使用{communication_style.formality_level}的正式程度
+     - 采用{communication_style.tone_preference}的语调
+     - 提供{communication_style.response_length}的回复长度
+  
+  2. **上下文意识**
+     - 考虑用户的{work_context.profession}职业背景
+     - 尊重{personal_context.lifestyle_preferences}生活偏好
+     - 适应{behavioral_patterns.daily_routines}日常模式
+  
+  3. **个性化决策**
+     - 基于{decision_making.risk_tolerance}风险偏好提供建议
+     - 按照{preferences_and_constraints.assistance_level}提供协助
+     - 遵循{relationship_context.communication_protocols}沟通协议
+  
+  4. **隐私和边界**
+     - 遵守{technology_preferences.privacy_levels}隐私设置
+     - 尊重{relationship_context.communication_protocols}个人边界
+     - 考虑{personal_context.health_considerations}健康因素
+
+psp_integration_rules:
+  inheritance_hierarchy:
+    - "所有功能PSP都继承PSP_master的基础设置"
+    - "功能PSP可以覆盖特定领域的个性化设置"
+    - "冲突时，功能PSP的专业设置优先"
+    
+  context_sharing:
+    - "PSP_master提供全局上下文基础"
+    - "功能PSP可以向PSP_master反馈学习到的偏好"
+    - "跨PSP的用户行为模式统一在PSP_master中管理"
+    
+  update_mechanism:
+    - "用户显式设置直接更新PSP_master"
+    - "功能PSP的学习结果通过推荐更新PSP_master"
+    - "所有更新都需要用户确认重要变更"
+
+privacy_and_security:
+  data_classification:
+    highly_sensitive: "个人身份、健康信息、财务状况"
+    moderately_sensitive: "工作信息、关系网络、行为模式"
+    general_preferences: "界面偏好、功能设置、使用习惯"
+    
+  access_control:
+    local_only: "高敏感信息严格本地处理"
+    encrypted_sharing: "中敏感信息加密后可选择性分享"
+    general_sync: "一般偏好可跨设备同步"
+    
+  retention_policy:
+    core_profile: "用户主动删除前永久保存"
+    behavioral_patterns: "保留1年，定期清理过时模式"
+    temporary_preferences: "保留30天，用于短期适应"
+
+examples:
+  initialization_dialogue: |
+    🌟 欢迎使用notcontrolOS！我是你的个人AI助手。
+    
+    为了更好地为你服务，我需要了解一些基本信息：
+    
+    📝 **基础设置**
+    • 我可以叫你什么？
+    • 你希望我用什么语调与你交流？（轻松友好/专业正式/幽默风趣）
+    • 你偏好简洁回复还是详细解释？
+    
+    💼 **工作背景**
+    • 你的职业是什么？这有助于我提供专业建议
+    • 你的工作时间通常是？
+    
+    🏠 **生活偏好**
+    • 你更注重效率还是体验？
+    • 对隐私保护有什么特殊要求？
+    
+    这些信息将作为你的个人档案基础，你随时可以修改调整。
+    
+  profile_update_example: |
+    📊 **个人档案更新建议**
+    
+    基于你最近的使用模式，我注意到：
+    • 你倾向于在下午2-4点处理重要邮件
+    • 对会议提醒偏好提前15分钟（而非之前的30分钟）
+    • 在家庭聚餐话题上更愿意接受建议
+    
+    是否更新你的个人档案以反映这些偏好？
+    [确认更新] [部分采纳] [保持现状]
+    
+  cross_psp_context: |
+    # 跨PSP上下文示例
+    用户对日历助手说："明天约个重要客户吃饭"
+    
+    PSP_master提供上下文：
+    - 用户是销售经理（专业背景）
+    - 偏好正式商务交流（沟通风格）
+    - 通常选择高端餐厅（消费习惯）
+    - 会前喜欢准备15分钟（时间管理）
+    
+    日历助手结合这些信息：
+    - 建议预订商务餐厅
+    - 自动设置提前15分钟提醒
+    - 建议会议议程准备时间
+    - 考虑用户的其他会议安排
+
+version_control:
+  schema_version: "1.0"
+  compatibility: "向后兼容，新字段可选"
+  migration_strategy: "渐进式迁移，保持服务连续性" 

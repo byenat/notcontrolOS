@@ -1,0 +1,105 @@
+# notcontrolOS Kernel Configuration
+
+mainmenu "notcontrolOS Configuration"
+
+config NOTCONTROLOS
+	bool
+	default y
+	help
+	  This is the notcontrolOS (Context, Not Control OS) configuration.
+	  notcontrolOS is a specialized OS designed for AI-native computing.
+
+menu "General setup"
+
+config LOCALVERSION
+	string "Local version - append to kernel release"
+	help
+	  Append an extra string to the end of your kernel version.
+
+config PSP_SUPPORT
+	bool "Personal System Prompt (PSP) support"
+	default y
+	help
+	  Enable PSP (Personal System Prompt) support in the kernel.
+	  This allows the system to load and manage personalized AI prompts.
+
+config HYBRID_INFERENCE
+	bool "Hybrid AI inference engine"
+	default y
+	help
+	  Enable hybrid local/cloud AI inference capabilities.
+
+endmenu
+
+menu "AI subsystem"
+
+config NOTCONTROLOS_AI
+	bool "Enable notcontrolOS AI subsystem"
+	default y
+	help
+	  Core AI processing subsystem for notcontrolOS.
+
+config AI_INFERENCE_ENGINE
+	bool "AI inference engine"
+	depends on NOTCONTROLOS_AI
+	default y
+	help
+	  Enable local AI inference capabilities.
+
+config AI_MODEL_ROUTING
+	bool "AI model routing"
+	depends on NOTCONTROLOS_AI
+	default y
+	help
+	  Enable intelligent routing between local and cloud models.
+
+endmenu
+
+menu "Memory management"
+
+config CONTEXT_MEMORY
+	bool "Context window memory management"
+	default y
+	help
+	  Specialized memory management for AI context windows.
+
+config KNOWLEDGE_MEMORY
+	bool "Knowledge-aware memory management"
+	default y
+	help
+	  Memory management optimized for knowledge structures.
+
+endmenu
+
+menu "File systems"
+
+config KNOWLEDGE_FS
+	bool "Knowledge management file system"
+	default y
+	help
+	  Generic file system for structured knowledge management.
+
+config PSPFS
+	bool "PSP file system"
+	default y
+	help
+	  File system for Personal System Prompt storage.
+
+endmenu
+
+menu "Security options"
+
+config NOTCONTROLOS_SECURITY
+	bool "notcontrolOS security framework"
+	default y
+	help
+	  Core security framework for notcontrolOS.
+
+config PRIVACY_COMPUTING
+	bool "Privacy computing support"
+	depends on NOTCONTROLOS_SECURITY
+	default y
+	help
+	  Enable privacy-preserving computation features.
+
+endmenu 

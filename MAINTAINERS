@@ -1,0 +1,359 @@
+# notcontrolOS 维护者指南
+
+本文件记录了 notcontrolOS 项目各个子系统的维护者信息，遵循 Linux 内核项目的维护者模式。
+
+## 维护者角色说明
+
+- **M**: Maintainer (维护者) - 对特定子系统有决策权的核心开发者
+- **R**: Reviewer (评审者) - 负责代码评审的专家
+- **L**: List (邮件列表) - 相关讨论的邮件列表
+- **S**: Status (状态) - 维护状态
+- **F**: Files (文件) - 维护的文件和目录
+
+## 状态说明
+
+- **Supported**: 积极维护中
+- **Maintained**: 定期维护
+- **Odd Fixes**: 偶尔修复
+- **Orphan**: 缺少维护者
+- **Obsolete**: 已废弃
+
+---
+
+## notcontrolOS 核心架构
+
+### 内核子系统
+**M**: Core Team <core@notcontrolos.org>  
+**L**: notcontrolos-kernel@groups.io  
+**S**: Supported  
+**F**: kernel/  
+**F**: include/notcontrolos/core.h
+
+### 系统调用接口
+**M**: Tools Team <tools@notcontrolos.org>  
+**L**: notcontrolos-syscalls@groups.io  
+**S**: Supported  
+**F**: kernel/core/syscalls/  
+**F**: include/notcontrolos/syscalls.h
+
+### AI 推理引擎
+**M**: AI Team <ai@notcontrolos.org>  
+**L**: notcontrolos-ai@groups.io  
+**S**: Supported  
+**F**: kernel/ai/  
+**F**: include/notcontrolos/ai.h
+
+---
+
+## 文件系统
+
+### 知识管理文件系统
+**M**: Knowledge Team <knowledge@notcontrolos.org>  
+**L**: notcontrolos-knowledge@groups.io  
+**S**: Supported  
+**F**: fs/knowledge/  
+**F**: include/notcontrolos/knowledge.h
+
+### PSP 文件系统
+**M**: PSP Team <psp@notcontrolos.org>  
+**L**: notcontrolos-psp@groups.io  
+**S**: Supported  
+**F**: fs/pspfs/  
+**F**: include/notcontrolos/psp.h
+
+### 缓存文件系统
+**M**: Storage Team <storage@notcontrolos.org>  
+**L**: notcontrolos-storage@groups.io  
+**S**: Maintained  
+**F**: fs/cache/  
+**F**: include/notcontrolos/cache.h
+
+### 向量数据库文件系统
+**M**: Vector Team <vector@notcontrolos.org>  
+**L**: notcontrolos-vector@groups.io  
+**S**: Supported  
+**F**: fs/vector/  
+**F**: include/notcontrolos/vector.h
+
+---
+
+## PSP 系统
+
+### PSP 核心
+**M**: PSP Core Team <psp-core@notcontrolos.org>  
+**L**: notcontrolos-psp-core@groups.io  
+**S**: Supported  
+**F**: psp/core/  
+**F**: psp/interfaces/
+
+### PSP 编译器
+**M**: PSP Compiler Team <psp-compiler@notcontrolos.org>  
+**L**: notcontrolos-psp-compiler@groups.io  
+**S**: Supported  
+**F**: psp/core/compiler/  
+**F**: tools/psp_compiler/
+
+### PSP 运行时
+**M**: PSP Runtime Team <psp-runtime@notcontrolos.org>  
+**L**: notcontrolos-psp-runtime@groups.io  
+**S**: Supported  
+**F**: psp/runtime/  
+**F**: psp/storage/
+
+### PSP 标准库
+**M**: PSP Standards Team <psp-standards@notcontrolos.org>  
+**L**: notcontrolos-psp-standards@groups.io  
+**S**: Maintained  
+**F**: psp/functional/  
+**F**: psp/standards/
+
+---
+
+## 网络子系统
+
+### 云端桥接
+**M**: Network Team <network@notcontrolos.org>  
+**L**: notcontrolos-network@groups.io  
+**S**: Supported  
+**F**: net/cloud_bridge/  
+**F**: include/notcontrolos/cloud_bridge.h
+
+### 联邦协议
+**M**: Federation Team <federation@notcontrolos.org>  
+**L**: notcontrolos-federation@groups.io  
+**S**: Maintained  
+**F**: net/federation/  
+**F**: protocols/federation/
+
+### 模型路由
+**M**: Model Routing Team <model-routing@notcontrolos.org>  
+**L**: notcontrolos-model-routing@groups.io  
+**S**: Supported  
+**F**: net/model_routing/  
+**F**: include/notcontrolos/model_routing.h
+
+### 隐私保护
+**M**: Privacy Team <privacy@notcontrolos.org>  
+**L**: notcontrolos-privacy@groups.io  
+**S**: Supported  
+**F**: net/privacy/  
+**F**: security/privacy/
+
+---
+
+## 协议实现
+
+### MCP 协议
+**M**: MCP Team <mcp@notcontrolos.org>  
+**L**: notcontrolos-mcp@groups.io  
+**S**: Supported  
+**F**: protocols/mcp/  
+**F**: include/notcontrolos/mcp.h
+
+### PSP 协议
+**M**: PSP Protocol Team <psp-protocol@notcontrolos.org>  
+**L**: notcontrolos-psp-protocol@groups.io  
+**S**: Supported  
+**F**: protocols/psp/  
+**F**: psp/standards/protocol/
+
+### 通信协议
+**M**: Communication Team <comm@notcontrolos.org>  
+**L**: notcontrolos-comm@groups.io  
+**S**: Maintained  
+**F**: protocols/communication/  
+**F**: include/notcontrolos/comm.h
+
+---
+
+## 安全子系统
+
+### 访问控制
+**M**: Security Team <security@notcontrolos.org>  
+**L**: notcontrolos-security@groups.io  
+**S**: Supported  
+**F**: security/access_control/  
+**F**: include/notcontrolos/access_control.h
+
+### 认证授权
+**M**: Auth Team <auth@notcontrolos.org>  
+**L**: notcontrolos-auth@groups.io  
+**S**: Supported  
+**F**: security/authentication/  
+**F**: security/authorization/
+
+### 加密子系统
+**M**: Crypto Team <crypto@notcontrolos.org>  
+**L**: notcontrolos-crypto@groups.io  
+**S**: Supported  
+**F**: security/encryption/  
+**F**: lib/crypto/
+
+### 审计日志
+**M**: Audit Team <audit@notcontrolos.org>  
+**L**: notcontrolos-audit@groups.io  
+**S**: Maintained  
+**F**: security/audit/  
+**F**: include/notcontrolos/audit.h
+
+---
+
+## 驱动子系统
+
+### AI 驱动
+**M**: AI Drivers Team <ai-drivers@notcontrolos.org>  
+**L**: notcontrolos-ai-drivers@groups.io  
+**S**: Supported  
+**F**: drivers/ai/  
+**F**: include/notcontrolos/ai_drivers.h
+
+### 网络驱动
+**M**: Network Drivers Team <net-drivers@notcontrolos.org>  
+**L**: notcontrolos-net-drivers@groups.io  
+**S**: Maintained  
+**F**: drivers/network/  
+**F**: include/notcontrolos/net_drivers.h
+
+### 传感器驱动
+**M**: Sensor Team <sensors@notcontrolos.org>  
+**L**: notcontrolos-sensors@groups.io  
+**S**: Maintained  
+**F**: drivers/sensors/  
+**F**: include/notcontrolos/sensors.h
+
+### 存储驱动
+**M**: Storage Drivers Team <storage-drivers@notcontrolos.org>  
+**L**: notcontrolos-storage-drivers@groups.io  
+**S**: Supported  
+**F**: drivers/storage/  
+**F**: include/notcontrolos/storage_drivers.h
+
+---
+
+## 架构支持
+
+### ARM64 架构
+**M**: ARM Team <arm@notcontrolos.org>  
+**L**: notcontrolos-arm@groups.io  
+**S**: Supported  
+**F**: arch/arm64/  
+**F**: include/asm/arm64.h
+
+### x86_64 架构
+**M**: x86 Team <x86@notcontrolos.org>  
+**L**: notcontrolos-x86@groups.io  
+**S**: Supported  
+**F**: arch/x86_64/  
+**F**: include/asm/x86_64.h
+
+### RISC-V 架构
+**M**: RISC-V Team <riscv@notcontrolos.org>  
+**L**: notcontrolos-riscv@groups.io  
+**S**: Maintained  
+**F**: arch/riscv/  
+**F**: include/asm/riscv.h
+
+### 通用架构
+**M**: Common Arch Team <common-arch@notcontrolos.org>  
+**L**: notcontrolos-common-arch@groups.io  
+**S**: Supported  
+**F**: arch/common/  
+**F**: include/asm/common.h
+
+---
+
+## 开发工具
+
+### 构建系统
+**M**: Build Team <build@notcontrolos.org>  
+**L**: notcontrolos-build@groups.io  
+**S**: Supported  
+**F**: Makefile  
+**F**: Kconfig  
+**F**: scripts/
+
+### 调试器
+**M**: Debug Team <debug@notcontrolos.org>  
+**L**: notcontrolos-debug@groups.io  
+**S**: Maintained  
+**F**: tools/debugger/  
+**F**: include/notcontrolos/debug.h
+
+### 性能分析器
+**M**: Profiler Team <profiler@notcontrolos.org>  
+**L**: notcontrolos-profiler@groups.io  
+**S**: Maintained  
+**F**: tools/profiler/  
+**F**: include/notcontrolos/profiler.h
+
+### 迁移工具
+**M**: Migration Team <migration@notcontrolos.org>  
+**L**: notcontrolos-migration@groups.io  
+**S**: Supported  
+**F**: tools/migration/  
+**F**: scripts/migration/
+
+---
+
+## 库和工具
+
+### AI 工具库
+**M**: AI Utils Team <ai-utils@notcontrolos.org>  
+**L**: notcontrolos-ai-utils@groups.io  
+**S**: Supported  
+**F**: lib/ai_utils/  
+**F**: include/notcontrolos/ai_utils.h
+
+### 压缩库
+**M**: Compression Team <compression@notcontrolos.org>  
+**L**: notcontrolos-compression@groups.io  
+**S**: Maintained  
+**F**: lib/compression/  
+**F**: include/notcontrolos/compression.h
+
+### 测试框架
+**M**: Testing Team <testing@notcontrolos.org>  
+**L**: notcontrolos-testing@groups.io  
+**S**: Supported  
+**F**: tests/  
+**F**: samples/
+
+---
+
+## 社区治理
+
+### 发布管理
+**M**: Release Team <release@notcontrolos.org>  
+**L**: notcontrolos-release@groups.io  
+**S**: Supported  
+**F**: Documentation/releases/
+
+### 社区管理
+**M**: Community Team <community@notcontrolos.org>  
+**L**: notcontrolos-community@groups.io  
+**S**: Supported  
+**F**: community/  
+**F**: Documentation/community/
+
+### 标准制定
+**M**: Standards Team <standards@notcontrolos.org>  
+**L**: notcontrolos-standards@groups.io  
+**S**: Supported  
+**F**: standards/  
+**F**: Documentation/standards/
+
+---
+
+## 联系方式
+
+如需联系特定子系统的维护者，请发送邮件至对应的维护者邮箱或加入相关邮件列表进行讨论。
+
+对于一般性问题或不确定归属的问题，请联系：  
+**General**: general@notcontrolos.org  
+**Security**: security@notcontrolos.org  
+**Architecture**: arch@notcontrolos.org
+
+更多信息请参阅：  
+- [贡献指南](CONTRIBUTING.md)
+- [开发文档](Documentation/dev-guide/)
+- [社区治理](Documentation/community/governance/) 

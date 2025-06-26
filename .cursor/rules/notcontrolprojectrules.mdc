@@ -1,0 +1,41 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# notcontrolOS 项目核心规则 / notcontrolOS Core Project Rules
+
+## 项目核心理念 / Core Philosophy
+
+### "Context, Not Control"
+**English**: The fundamental philosophy - in the AI era, providing rich context is more powerful than attempting to control every aspect of computation.
+
+**中文**: 根本理念 - 在AI时代，提供丰富的上下文比试图控制计算的每个方面更加强大。
+
+### Context is the New Program
+**English**: Context becomes the new program - rich contextual information guides AI systems to understand and act appropriately. Design system components with context as first-class citizen. AI-native thinking over traditional OS concepts.
+
+**中文**: 上下文成为新的程序 - 丰富的上下文信息指导AI系统理解并适当地行动。以上下文作为一等公民设计系统组件。AI原生思维优于传统操作系统概念。
+
+### 数据自主权 / Data Sovereignty
+**English**: Users own, control, and benefit from their personal data. Reject the model where corporations treat user data as their asset.
+
+**中文**: 用户拥有、控制和受益于个人数据。拒绝公司将用户数据视为自己资产的模式。
+
+## 必须遵守的核心规则 / Mandatory Core Rules
+
+### 1. PSP术语体系 / PSP Terminology System
+**English**: Use unified PSP (Personal System Prompt) terminology. PSP_master → Functional PSP → Workflow PSP → Temporary PSP. No PSPD term.
+
+**中文**: 使用统一PSP（个人系统提示词）术语体系。PSP_master → 功能PSP → 工作流PSP → 临时PSP。不使用PSPD术语。
+
+### 2. 双语要求 / Bilingual Requirement
+**English**: Core documentation, APIs, and user interfaces must be bilingual (English/Chinese) from design phase.
+
+**中文**: 核心文档、API和用户界面必须从设计阶段就支持双语（英文/中文）。
+
+---
+
+**Note / 注意**: These are the essential rules that define notcontrolOS. Everything else is implementation detail.
+
+**注**: 这些是定义notcontrolOS的核心规则。其他都是实现细节。

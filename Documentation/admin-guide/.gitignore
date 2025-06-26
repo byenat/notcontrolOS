@@ -1,0 +1,29 @@
+# notcontrolOS 内部文档 - 不适合开源分享
+# Internal documents that should not be shared in open source
+
+# 迁移状态和内部决策文档
+MIGRATION_STATUS.md
+MIGRATION_PLAN.md
+
+# 内部开发历史和计划
+*_internal_*.md
+*_confidential_*.md
+
+# 商业策略和竞争分析
+*_strategy_*.md
+*_business_*.md
+*_competitive_*.md
+
+# 内部会议记录和决策过程
+meeting_notes/
+decisions/
+internal_reviews/
+
+# 临时文件和草稿
+*.draft
+*.tmp
+*_wip_*.md
+
+# 版本迁移历史
+migration_history/
+legacy_versions/ 
