@@ -1,0 +1,3 @@
+[submodule "core/notcontrolOS"]
+	path = core/notcontrolOS
+	url = https://github.com/byenat/notcontrolOS.git

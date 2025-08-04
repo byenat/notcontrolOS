@@ -1,0 +1,241 @@
+{
+  "name": "@notcontrolos/hinata",
+  "version": "1.0.0",
+  "description": "HiNATA (Highlight, Note, At, Tag, Access) - Core content and storage structure for notcontrolOS",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "files": [
+    "build/**/*",
+    "core/**/*.h",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "make build",
+    "build:dev": "make build-dev",
+    "build:prod": "tsc --project tsconfig.json --sourceMap false --removeComments",
+    "watch": "make watch",
+    "test": "make test",
+    "test:watch": "make test-watch",
+    "test:coverage": "make test-coverage",
+    "lint": "make lint",
+    "lint:fix": "eslint --fix **/*.ts",
+    "format": "make format",
+    "format:check": "prettier --check **/*.ts",
+    "docs": "make docs",
+    "clean": "make clean",
+    "clean:all": "make clean-all",
+    "setup": "make setup",
+    "install:notcontrolos": "make install",
+    "uninstall:notcontrolos": "make uninstall",
+    "integrate": "make integrate",
+    "benchmark": "make benchmark",
+    "profile": "make profile",
+    "memory-check": "make memory-check",
+    "dist": "make dist",
+    "info": "make info",
+    "check-deps": "make check-deps",
+    "prepack": "npm run build:prod",
+    "prepublishOnly": "npm run test && npm run lint",
+    "postinstall": "echo 'HiNATA installed successfully. Run npm run setup to initialize development environment.'"
+  },
+  "keywords": [
+    "hinata",
+    "notcontrolos",
+    "knowledge-management",
+    "data-structure",
+    "storage",
+    "ai-native",
+    "context",
+    "highlight",
+    "note",
+    "tag",
+    "access-control",
+    "semantic-search",
+    "personal-os"
+  ],
+  "author": {
+    "name": "ZentaN Team",
+    "email": "team@zentan.ai",
+    "url": "https://zentan.ai"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zentan/notcontrolOS.git",
+    "directory": "fs/knowledge/hinata"
+  },
+  "bugs": {
+    "url": "https://github.com/zentan/notcontrolOS/issues"
+  },
+  "homepage": "https://docs.zentan.ai/hinata",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "dependencies": {
+    "uuid": "^9.0.0",
+    "crypto-js": "^4.1.1",
+    "fuse.js": "^6.6.2",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/uuid": "^9.0.0",
+    "@types/crypto-js": "^4.1.1",
+    "@types/lodash": "^4.14.195",
+    "@types/jest": "^29.5.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.45.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jest": "^27.2.3",
+    "eslint-plugin-security": "^1.7.1",
+    "eslint-plugin-jsdoc": "^46.4.6",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "jest": "^29.6.0",
+    "jest-junit": "^16.0.0",
+    "jest-watch-typeahead": "^2.2.2",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.1.6",
+    "prettier": "^3.0.0",
+    "typedoc": "^0.24.8",
+    "benchmark": "^2.1.4",
+    "@types/benchmark": "^2.1.2"
+  },
+  "peerDependencies": {
+    "@notcontrolos/core": ">=1.0.0"
+  },
+  "optionalDependencies": {
+    "sqlite3": "^5.1.6",
+    "better-sqlite3": "^8.14.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "config": {
+    "hinata": {
+      "version": "1.0.0",
+      "buildTarget": "es2020",
+      "enableDebug": false,
+      "enableProfiling": false,
+      "maxMemoryUsage": "512MB",
+      "defaultStorageType": "memory",
+      "enableEncryption": false,
+      "enableCaching": true,
+      "cacheSize": 1000,
+      "batchSize": 100,
+      "cleanupInterval": 3600000
+    }
+  },
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/zentan"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "directories": {
+    "lib": "build",
+    "test": "tests",
+    "doc": "docs"
+  },
+  "exports": {
+    ".": {
+      "import": "./build/index.js",
+      "require": "./build/index.js",
+      "types": "./build/index.d.ts"
+    },
+    "./core": {
+      "import": "./build/core/index.js",
+      "require": "./build/core/index.js",
+      "types": "./build/core/index.d.ts"
+    },
+    "./storage": {
+      "import": "./build/storage/index.js",
+      "require": "./build/storage/index.js",
+      "types": "./build/storage/index.d.ts"
+    },
+    "./api": {
+      "import": "./build/api/index.js",
+      "require": "./build/api/index.js",
+      "types": "./build/api/index.d.ts"
+    },
+    "./manager": {
+      "import": "./build/manager.js",
+      "require": "./build/manager.js",
+      "types": "./build/manager.d.ts"
+    },
+    "./kernel": {
+      "import": "./build/kernel_interface.js",
+      "require": "./build/kernel_interface.js",
+      "types": "./build/kernel_interface.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "typesVersions": {
+    "*": {
+      "core": ["build/core/index.d.ts"],
+      "storage": ["build/storage/index.d.ts"],
+      "api": ["build/api/index.d.ts"],
+      "manager": ["build/manager.d.ts"],
+      "kernel": ["build/kernel_interface.d.ts"]
+    }
+  },
+  "browserslist": [
+    "node >= 16"
+  ],
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "**/*.ts",
+      "!**/*.d.ts",
+      "!**/node_modules/**",
+      "!**/build/**",
+      "!**/dist/**"
+    ]
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "none",
+    "singleQuote": true,
+    "printWidth": 100,
+    "tabWidth": 2,
+    "useTabs": false,
+    "bracketSpacing": true,
+    "arrowParens": "avoid",
+    "endOfLine": "lf"
+  },
+  "eslintConfig": {
+    "extends": ["./.eslintrc.js"]
+  },
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run format:check",
+      "pre-push": "npm run test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "release": {
+    "branches": ["main", "next"],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      "@semantic-release/git"
+    ]
+  }
+}
